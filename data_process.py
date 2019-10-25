@@ -6,7 +6,7 @@
 
 import os
 import codecs
-
+import conf
 from word2cut import WordCut
 
 class DataProcess:
@@ -18,27 +18,27 @@ class DataProcess:
 
     def __init__(self, use_word2cut=True):
         
-        self.corpus_path = "corpus"
-        self.model_path = "model"
-        self.data_path = "data"
+        self.corpus_path = conf.corpus_path
+        self.model_path = conf.model_path
+        self.data_path = conf.data_path
         
         if not os.path.exists(self.model_path):
             os.makedirs(self.model_path)
         if not os.path.exists(self.data_path):
             os.makedirs(self.data_path)
             
-        self.enc_vocab_size = 20000
-        self.dec_vocab_size = 20000
-        self.enc_input_length = 50
-        self.dec_output_length = 50
-        self.enc_embedding_length = 128
-        self.dec_embedding_length = 128
-        self.hidden_dim = 100
-        self.layer_shape = (2, 1)
-        self.epsilon = 1e-6
+        self.enc_vocab_size = conf.enc_vocab_size
+        self.dec_vocab_size = conf.dec_vocab_size
+        self.enc_input_length = conf.enc_input_length
+        self.dec_output_length = conf.dec_output_length
+        self.enc_embedding_length = conf.enc_embedding_length
+        self.dec_embedding_length = conf.dec_embedding_length
+        self.hidden_dim = conf.hidden_dim
+        self.layer_shape = conf.layer_shape
+        self.epsilon = conf.epsilon
         
-        self.enc_file = self.corpus_path + os.sep + "question.txt"
-        self.dec_file = self.corpus_path + os.sep + "answer.txt"
+        self.enc_file = self.corpus_path + os.sep + conf.source
+        self.dec_file = self.corpus_path + os.sep + conf.target
         self.enc_vocab_file = self.model_path + os.sep + \
                                 "enc_vocab" + str(self.enc_vocab_size) + ".data"
         self.dec_vocab_file = self.model_path + os.sep + \
