@@ -32,7 +32,7 @@
 `predict_test.ipynb`
 
 ## 3. 更新 或者用jieba分词
-> * Word2cut模型对陌生词汇的分词未解决.
+> * Word2cut模型对陌生词汇的分词未解决,后续会补齐jieba分词.
 
 ## 注意感谢，以上很多内容需感谢@shen1994,有不妥之处请联系：976344083@qq.com
 > * seq2seq论文地址: https://arxiv.org/abs/1409.3215  
