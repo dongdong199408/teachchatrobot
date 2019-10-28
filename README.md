@@ -9,6 +9,7 @@
 
 ## 1. 效果展示  
 ### 1.0 `python train.py`执行效果图  
+> * 注意：aucc可能很小，因为embdding的维度大，完全一样不可能，只能比较mse
 ![image](./images/train.jpg)  
 ### 1.1 `python test.py`执行效果图  
 ![image](./images/test-ans.jpg)  
