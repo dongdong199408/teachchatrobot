@@ -28,6 +28,8 @@
 `python chat_robot.py`  
 > * 绘制word2vec向量分布图  
 `python word2vec_plot.py`  
+> * 直接jupyter运行预测结果
+`predict_test.ipynb`
 
 ## 3. 更新 或者用jieba分词
 > * Word2cut模型对陌生词汇的分词未解决.
